@@ -17,7 +17,8 @@ public class BaseClasscrossBrowser1 {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	
-			
+	
+	//No need input stream if we fetch data from data table and no properties file presence 
 	public  BaseClasscrossBrowser1 () {
 				
 	try {

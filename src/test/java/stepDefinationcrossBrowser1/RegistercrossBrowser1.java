@@ -62,6 +62,12 @@ public class RegistercrossBrowser1 extends BaseClasscrossBrowser1{
 	   
 		registerpageActioncrossBrowser1.user_enter_the_following_details(dataTable);
 	}
+	
+	@When("User enters the following details from data table:")
+	public void user_enters_the_following_details_from_data_table(DataTable dataTable) {
+	    
+		registerpageActioncrossBrowser1.user_enters_the_following_details_from_data_table(dataTable);
+	}
 
 	@When("User agrees to the terms and conditions")
 	public void user_agrees_to_the_terms_and_conditions() {

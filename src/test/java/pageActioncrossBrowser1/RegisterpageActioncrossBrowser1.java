@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -82,8 +83,51 @@ public class RegisterpageActioncrossBrowser1 extends BaseClasscrossBrowser1 {
 	                System.out.println("Unknown field: " + fieldName);
 	        }
 	    }
+	    }
 	    
-	   
+	public void user_enters_the_following_details_from_data_table (DataTable dataTable) {
+		
+		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+	    
+	    for (Map<String, String> row : data) {
+	    	
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.userFirstName)).sendKeys(row.get("firstName"));
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.userLastName)).sendKeys(row.get("lastName"));
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.userEmail)).sendKeys(row.get("email"));
+	    	
+	    	//Selecting Date of Birth
+	    	
+	    	new Select (registerpageLocatorcrossBrowser1.dateOfBirthDay).selectByVisibleText(row.get("date"));
+	    	new Select (registerpageLocatorcrossBrowser1.monthOfBirthDay).selectByVisibleText(row.get("month"));
+	    	new Select (registerpageLocatorcrossBrowser1.yearOfBirthDay).selectByVisibleText(row.get("year"));
+	    	
+	    	//Selecting country
+	    	((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500);");
+	    	registerpageLocatorcrossBrowser1.countryFlagContainer.click();
+	    	//wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.selectCountry)).click();
+	    	
+	    	Actions actions = new Actions(driver);
+	        actions.moveToElement(registerpageLocatorcrossBrowser1.countryFlagContainer).clickAndHold().moveByOffset(0, 100).release().perform();
+	        
+	        WebElement countryUSA = wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.countryUSA));
+	        
+	        countryUSA.click();
+	    		    	
+	    	
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.countryUK)).click();
+	    	
+	    	//Entering phone number
+	    	
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.enterPhoneNumber)).sendKeys(row.get("phoneNumber"));
+	    	
+	    	//Entering password
+	    	
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.userPassword)).sendKeys(row.get("password"));
+	    	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.enterConfirmPassword)).sendKeys(row.get("confirmPassword"));
+	    	
+	    	
+	    }
+	    
 	}
 	
 	public void user_check_to_the_terms_and_conditions() {

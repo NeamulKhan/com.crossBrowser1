@@ -42,6 +42,15 @@ public class RegisterpageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	@FindBy(xpath="//li[contains(@class, 'iti__country') and contains(., 'Canada')]")
 	public WebElement selectCountry;
 	
+	@FindBy(xpath="li[@class='iti__country iti__standard' and @data-country-code='us']")
+	//@FindBy(xpath="li[contains(@class, 'iti__country') and contains(text(), 'United States')]")
+	public WebElement countryUSA;
+	
+	@FindBy(xpath="li[@class='iti__country iti__standard' and @data-country-code='gb']")
+	
+	public WebElement countryUK;
+	
+		
 	@FindBy (xpath="(//input[@id='Phone'])[1]")
 	public WebElement enterPhoneNumber;
 	
@@ -52,6 +61,7 @@ public class RegisterpageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	public WebElement enterConfirmPassword;
 	
 	@FindBy (xpath="(//label[@for='accept-consent'])[1]")
+	//@FindBy(xpath="//input[@id='accept-consent']")
 	public WebElement acceptPrivacy;
 	
 	@FindBy (id ="register-button")
