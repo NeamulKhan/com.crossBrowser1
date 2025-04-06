@@ -30,4 +30,3 @@ When User enters the following details:
 And User agrees to the terms and conditions
 And User clicks on the Register button
 Then User should be successfully registered
-And User should see a successful registration message

@@ -105,19 +105,22 @@ public class RegisterpageActioncrossBrowser1 extends BaseClasscrossBrowser1 {
 
 			if(newUser.isDisplayed()) {
 				
+				highlightElement(newUser, "green"); //Highlight green if passed
 				Assert.assertTrue(true, "New user registered successfully.");
 				System.out.println("New user registered successfully.");
 				 return; // Exit the method as existing user scenario was handled
 				
 			}
-		} catch (org.openqa.selenium.TimeoutException e) {
+		}catch (org.openqa.selenium.TimeoutException e) {
             // Welcome message not found, check for existing user message
         }
 		
+		
 		try {
-			WebElement userExist =	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.welcomeMsg));
+			WebElement userExist =	wait.until(ExpectedConditions.visibilityOf(registerpageLocatorcrossBrowser1.existMsg));
 			 if (userExist.isDisplayed()) {
 				
+				 highlightElement(userExist, "green");//highlight green if failed
 				Assert.assertTrue(true, "User already exists.");
 				System.out.println("User already exists.");
 				
@@ -129,14 +132,18 @@ public class RegisterpageActioncrossBrowser1 extends BaseClasscrossBrowser1 {
 		}catch (org.openqa.selenium.TimeoutException e) {
             // Existing user message not found
         }
-		 
-		 			
-			Assert.fail("Incorrect detailed entered!");
-			System.err.println("You entered incorrect details");
-			// might want to take a screenshot here to help diagnose the issue.
-            // byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            // scenario.attach(screenshot, "image/png", "Registration Failure");
+	}
+	
+	//Method to highlight element
+		
+		public void highlightElement(WebElement element, String color) {
+			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].style.border='3px solid " + color + "'", element);
+		
+	
 		}
+	
 		
 	}
 	

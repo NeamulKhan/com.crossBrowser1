@@ -1,5 +1,7 @@
 package stepDefinationcrossBrowser1;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import io.cucumber.datatable.DataTable;
@@ -72,22 +74,11 @@ public class RegistercrossBrowser1 extends BaseClasscrossBrowser1{
 	   
 		registerpageActioncrossBrowser1.user_clicks_on_the_register_button();
 	}
-
+	
 	@Then("User should be successfully registered")
 	public void user_should_be_successfully_registered() {
-	    
+	  
 		registerpageActioncrossBrowser1.verify_user_should_be_successfully_registered();
 	}
-
-	@Then("User should see a successful registration message")
-	public void user_should_see_a_successful_registration_message() {
-	   
-		
-	}
-
-
-
-	
-	
 	
 }

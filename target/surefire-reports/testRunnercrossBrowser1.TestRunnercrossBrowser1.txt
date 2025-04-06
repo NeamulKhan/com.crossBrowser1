@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testRunnercrossBrowser1.TestRunnercrossBrowser1
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 32.61 s <<< FAILURE! -- in testRunnercrossBrowser1.TestRunnercrossBrowser1
-testRunnercrossBrowser1.TestRunnercrossBrowser1.runScenario["Successful registration with valid details", "User Registration on Always Fashion"](2) -- Time elapsed: 23.71 s <<< FAILURE!
-java.lang.AssertionError: Incorrect detailed entered!
-	at org.testng.Assert.fail(Assert.java:111)
-	at pageActioncrossBrowser1.RegisterpageActioncrossBrowser1.verify_user_should_be_successfully_registered(RegisterpageActioncrossBrowser1.java:134)
-	at stepDefinationcrossBrowser1.RegistercrossBrowser1.user_should_be_successfully_registered(RegistercrossBrowser1.java:79)
-	at ✽.User should be successfully registered(file:///C:/workspaces/projects/com.crossBrowser1/src/test/resource/featureFoldercrossBrowser1/RegistercrossBrowser1.feature:32)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.82 s -- in testRunnercrossBrowser1.TestRunnercrossBrowser1
