@@ -6,15 +6,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilitycrossBrowser1.BaseClasscrossBrowser1;
 
-public class RegisterpageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
+public class Register2pageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	
 	
-	
-	public RegisterpageLocatorcrossBrowser1() {
+	public Register2pageLocatorcrossBrowser1 () {
 		
 		PageFactory.initElements(driver,this);	
 	}
-
+	
+	
 	@FindBy(xpath="(//div[@for='gender-male'])[1]")
 	public WebElement gender;
 	
@@ -43,11 +43,9 @@ public class RegisterpageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	public WebElement selectCountry;
 	
 	@FindBy(xpath="//li[@class='iti__country iti__standard' and @data-country-code='us']")
-	//@FindBy(xpath="li[contains(@class, 'iti__country') and contains(text(), 'United States')]")
 	public WebElement countryUSA;
 	
-	@FindBy(xpath="li[@class='iti__country iti__standard' and @data-country-code='gb']")
-	
+	@FindBy(xpath="//li[@class='iti__country iti__standard' and @data-country-code='gb']")
 	public WebElement countryUK;
 	
 		
@@ -72,7 +70,5 @@ public class RegisterpageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	
 	@FindBy(xpath="(//li[normalize-space()='Current customer is already registered'])[1]")
 	public WebElement existMsg;
-	
-	
 	
 }

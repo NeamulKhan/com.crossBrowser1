@@ -32,18 +32,7 @@ And User clicks on the Register button
 Then User should be successfully registered
 
 
-Scenario: User registration with specific data from data table 
-DataTable in horizontal , no feild, value header, modify feature file for simple code
 
-Given User is on the registration page
-When User select gender
-And User enters the following details from data table:
-| firstName | lastName | email              | date | month   | year | country | phoneNumber | password | confirmPassword |
-| Jane      | Doe      | jane.doe@test.com  | 15   | August  | 1990 | USA     | 9876543210  | Pass123    | Pass123         |
-| Alice     | Bob      | alice.bob@test.com | 22   | December| 1985 | UK      | 1122334455  | Pass456    | Pass456         |
-And User agrees to the terms and conditions
-And User clicks on the Register button
-Then User should be successfully registered
 
 
 
