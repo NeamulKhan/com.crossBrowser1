@@ -1,18 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testRunnercrossBrowser1.TestRunnercrossBrowser1
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 40.34 s <<< FAILURE! -- in testRunnercrossBrowser1.TestRunnercrossBrowser1
-testRunnercrossBrowser1.TestRunnercrossBrowser1.runScenario["Register user with valid details", "User Registration2 on Always Fashion"](1) -- Time elapsed: 15.73 s <<< FAILURE!
-java.lang.AssertionError:  ❌ Exception while validating messages: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='register-result-subtitle']' (tried for 10 second(s) with 500 milliseconds interval)
-	at org.testng.Assert.fail(Assert.java:111)
-	at pageActioncrossBrowser1.Register2pageActioncrossBrowser1.validateSuccessfullRegistration(Register2pageActioncrossBrowser1.java:95)
-	at stepDefinationcrossBrowser1.Register2crossBrowser1.user_should_be_successfully_registered2(Register2crossBrowser1.java:50)
-	at ✽.User should be successfully registered2(file:///C:/workspaces/projects/com.crossBrowser1/src/test/resource/featureFoldercrossBrowser1/Register2crossBrowser1.feature:11)
-
-testRunnercrossBrowser1.TestRunnercrossBrowser1.runScenario["Register user with valid details", "User Registration2 on Always Fashion"](2) -- Time elapsed: 19.47 s <<< FAILURE!
-java.lang.AssertionError:  ❌ Exception while validating messages: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//li[normalize-space()='Current customer is already registered'])[1]' (tried for 10 second(s) with 500 milliseconds interval)
-	at org.testng.Assert.fail(Assert.java:111)
-	at pageActioncrossBrowser1.Register2pageActioncrossBrowser1.validateSuccessfullRegistration(Register2pageActioncrossBrowser1.java:95)
-	at stepDefinationcrossBrowser1.Register2crossBrowser1.user_should_be_successfully_registered2(Register2crossBrowser1.java:50)
-	at ✽.User should be successfully registered2(file:///C:/workspaces/projects/com.crossBrowser1/src/test/resource/featureFoldercrossBrowser1/Register2crossBrowser1.feature:11)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.264 s -- in testRunnercrossBrowser1.TestRunnercrossBrowser1

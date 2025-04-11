@@ -11,7 +11,7 @@ import utilitycrossBrowser1.BaseClasscrossBrowser1;
 
 @CucumberOptions(features= {"src/test/resource/featureFoldercrossBrowser1"},
 plugin={"json:target/cucumber.json"},
-glue="stepDefinationcrossBrowser1", tags= "@Registration2" , //"@Registration", 
+glue="stepDefinationcrossBrowser1", tags=  "@Registration3" , // "@Registration2" , //"@Registration", 
 
 //dryRun = true,
 monochrome = true,

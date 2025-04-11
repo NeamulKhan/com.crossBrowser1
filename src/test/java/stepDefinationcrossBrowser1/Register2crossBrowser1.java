@@ -16,7 +16,7 @@ public class Register2crossBrowser1 extends BaseClasscrossBrowser1 {
 	public void user_is_on_the_registration2_page() {
 	   
 		driver.get(crossBrowser1_prop.getProperty("registration.url"));
-		 Assert.assertTrue(driver.getCurrentUrl().contains("/register")); // Verify URL
+		Assert.assertTrue(driver.getCurrentUrl().contains("/register")); // Verify URL
 	}
 
 	@When("User selects gender for registration2")
