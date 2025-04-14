@@ -44,8 +44,7 @@ public class Register3crossBrowser1 extends BaseClasscrossBrowser1 {
 	public void selects_country_enter_and(String string, String string2, String string3) {
 	   
 		register3pageActioncrossBrowser1.selects_country_enter_and(crossBrowser1_prop.getProperty("phone.number"), 
-		crossBrowser1_prop.getProperty("password"), crossBrowser1_prop.getProperty("confirm.password")
-		);
+		crossBrowser1_prop.getProperty("password"), crossBrowser1_prop.getProperty("confirm.password"));
 		
 	}
 	
@@ -53,19 +52,20 @@ public class Register3crossBrowser1 extends BaseClasscrossBrowser1 {
 	@When("User agrees to the terms and conditions for registration3")
 	public void user_agrees_to_the_terms_and_conditions_for_registration3() {
 	   
+		register3pageActioncrossBrowser1.user_agrees_to_the_terms_and_conditions_for_registration3();
 		
 	}
 
 	@When("User clicks on the Register3 button")
 	public void user_clicks_on_the_register3_button() {
 	   
-		
+		register3pageActioncrossBrowser1.user_clicks_on_the_register3_button();
 	}
 
 	@Then("verify user should be successfully registered3")
 	public void verify_user_should_be_successfully_registered3() {
 	   
-		
+		register3pageActioncrossBrowser1.verify_user_should_be_successfully_registered3();
 	}
 
 

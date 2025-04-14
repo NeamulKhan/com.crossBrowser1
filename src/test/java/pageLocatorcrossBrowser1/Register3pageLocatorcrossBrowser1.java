@@ -67,8 +67,8 @@ public class Register3pageLocatorcrossBrowser1 extends  BaseClasscrossBrowser1 {
 	@FindBy(xpath="//div[@class='register-result-subtitle']")
 	public WebElement welcomeMsg;
 	
-	@FindBy(xpath="(//li[normalize-space()='Current customer is already registered'])[1]")
+	@FindBy(xpath = "//div[@class='message-error alert alert-danger register-error-message validation-summary-errors']/ul/li[text()='The specified email already exists.']")
 	public WebElement existMsg;
-	
+		
 
 }

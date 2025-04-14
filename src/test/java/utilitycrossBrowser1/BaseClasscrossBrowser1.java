@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,6 +36,26 @@ public class BaseClasscrossBrowser1 {
 	    System.err.println("Error loading properties file: " + e.getMessage());
 	}
 	}
+	
+	//Method to highlight element
+	public void highlightElement(WebElement element, String color) {
+		
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+		//	 js.executeScript("arguments[0].setAttribute('style', arguments[0].getAttribute('style') + '; border: 3px solid " + color + " !important;')", element);
+			
+			js.executeScript("arguments[0].style.border='3px solid " + color + "'", element);
+			// Wait to make it visible
+	       // Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		}
+	
+	
 	
 	public  static void crossBrowser1_initializeDriver() {
 		
