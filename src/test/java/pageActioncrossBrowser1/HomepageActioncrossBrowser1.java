@@ -3,6 +3,7 @@ package pageActioncrossBrowser1;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,13 +48,24 @@ public class HomepageActioncrossBrowser1 extends BaseClasscrossBrowser1{
 		}
 		
 	}
-		//Method to highlight element
 		
-		public void highlightElement(WebElement element, String color) {
-			
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].style.border='3px solid " + color + "'", element);
-		}
+	public void enter_into_the_search_box(String x) {
+		
+		wait.until(ExpectedConditions.visibilityOf(homepageLocatorcrossBrowser1.searchBar)).sendKeys(x);
+	}
+	
+	public void press_enter_key_in_the_search_box() {
+		
+		homepageLocatorcrossBrowser1.searchBar.sendKeys(Keys.ENTER);
+				
+	}
+	
+	public void verify_user_should_see_search_results_related_to(String x) {
+		
+		WebElement resultsElement = homepageLocatorcrossBrowser1.searchResults;
+		Assert.assertTrue( resultsElement.isDisplayed());
+		
+	}
 
 }
 

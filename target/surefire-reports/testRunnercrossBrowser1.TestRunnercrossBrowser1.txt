@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testRunnercrossBrowser1.TestRunnercrossBrowser1
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 19.21 s <<< FAILURE! -- in testRunnercrossBrowser1.TestRunnercrossBrowser1
-testRunnercrossBrowser1.TestRunnercrossBrowser1.runScenario["Register user with valid details", "User Registration3 on Always Fashion"](1) -- Time elapsed: 14.48 s <<< FAILURE!
-java.lang.AssertionError: Failed to verify 'already exist' message: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='register-result-subtitle']' (tried for 10 second(s) with 500 milliseconds interval)
-	at org.testng.Assert.fail(Assert.java:111)
-	at pageActioncrossBrowser1.Register3pageActioncrossBrowser1.verify_user_should_be_successfully_registered3(Register3pageActioncrossBrowser1.java:113)
-	at stepDefinationcrossBrowser1.Register3crossBrowser1.verify_user_should_be_successfully_registered3(Register3crossBrowser1.java:68)
-	at ✽.verify user should be successfully registered3(file:///C:/workspaces/projects/com.crossBrowser1/src/test/resource/featureFoldercrossBrowser1/Register3crossBrowser1.feature:13)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.07 s -- in testRunnercrossBrowser1.TestRunnercrossBrowser1

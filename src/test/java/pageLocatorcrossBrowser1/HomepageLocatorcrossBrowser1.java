@@ -30,6 +30,14 @@ public class HomepageLocatorcrossBrowser1 extends BaseClasscrossBrowser1 {
 	public WebElement registerLogo;
 	
 	
+	//Search functionality
+	
+	@FindBy(xpath="(//input[@id='small-searchterms'])[1]")
+	public WebElement searchBar;
+	
+	@FindBy(xpath="//div[@class='search-results']")
+	public WebElement searchResults;
+	
 	
 }
 
